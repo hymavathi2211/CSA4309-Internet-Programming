@@ -1,0 +1,110 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Library Management System</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: #f0f4f8;
+            text-align: center;
+            margin: 30px;
+        }
+        h1 { color: darkblue; }
+        input, button, select {
+            padding: 10px;
+            margin: 5px;
+        }
+        button {
+            background: darkblue;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .box {
+            background: white;
+            padding: 15px;
+            margin: 15px auto;
+            max-width: 600px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Library Management System</h1>
+
+<div class="box">
+    <h2>Student Login / Register</h2>
+    <button onclick="login()">Login</button>
+    <button onclick="register()">Register</button>
+</div>
+
+<div class="box">
+    <h2>Search Books</h2>
+    <input id="search" placeholder="Enter book name">
+    <button onclick="searchBook()">Search</button>
+    <p id="result"></p>
+</div>
+
+<div class="box">
+    <h2>Admin - Add Book</h2>
+    <input id="book" placeholder="Book name">
+    <button onclick="addBook()">Add Book</button>
+    <ul id="books"></ul>
+</div>
+
+<div class="box">
+    <h2>Fine Calculator</h2>
+    <input type="number" id="days" placeholder="Late days">
+    <button onclick="fine()">Calculate Fine</button>
+    <p id="fineResult"></p>
+</div>
+
+<script>
+let library = ["Java", "Python", "HTML", "Data Structures"];
+
+function login() {
+    let user = prompt("Enter username:");
+    let pass = prompt("Enter password:");
+    if (user && pass) {
+        alert("Login successful!");
+    } else {
+        alert("Please enter your details.");
+    }
+}
+
+function register() {
+    let name = prompt("Enter your name:");
+    if (name) {
+        alert("Welcome " + name + "! Registration completed.");
+    }
+}
+
+function searchBook() {
+    let name = document.getElementById("search").value.toLowerCase();
+    let found = library.filter(b => b.toLowerCase().includes(name));
+    document.getElementById("result").innerHTML =
+        found.length ? found.join("<br>") : "Book not found";
+}
+
+function addBook() {
+    let name = document.getElementById("book").value;
+    if (name.trim()) {
+        library.push(name);
+        document.getElementById("books").innerHTML +=
+            "<li>" + name + "</li>";
+        alert("Book added successfully!");
+    }
+}
+
+function fine() {
+    let days = Number(document.getElementById("days").value);
+    let amount = Math.max(0, days) * 5;
+    document.getElementById("fineResult").innerHTML =
+        "Fine amount: ₹" + amount;
+}
+</script>
+
+</body>
+</html>
