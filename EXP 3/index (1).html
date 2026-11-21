@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="Compare routes, choose a seat and create a sample ticket." name="description"/>
+  <title>
+   RouteRunner Bus Booking | Internet Programming Lab
+  </title>
+  <link href="style.css" rel="stylesheet"/>
+  <script defer="" src="script.js">
+  </script>
+ </head>
+ <body class="theme-transport" data-experiment="3">
+  <div class="announcement">
+   INTERNET PROGRAMMING LAB
+   <span>
+    EXPERIMENT 03
+   </span>
+   <span class="demo-flag">
+    FRONT-END DEMO
+   </span>
+  </div>
+  <header class="site-header">
+   <a class="brand" href="#top">
+    <span class="brand-mark">
+     R
+    </span>
+    <span>
+     <strong>
+      RouteRunner Bus Booking
+     </strong>
+     <small>
+      Route desk
+     </small>
+    </span>
+   </a>
+   <nav class="main-nav">
+    <a href="#catalog">
+     Route options
+    </a>
+    <a href="#workspace">
+     Journey details
+    </a>
+    <a href="#about">
+     About this demo
+    </a>
+   </nav>
+   <button class="nav-action" onclick="document.getElementById('workspace').scrollIntoView({behavior:'smooth'})">
+    Get started
+    <span>
+     &nearrow;
+    </span>
+   </button>
+  </header>
+  <main class="page-shell" id="top">
+   <section class="hero hero-travel">
+    <div>
+     <p class="eyebrow">
+      TRAVEL / ROUTE SERVICES
+     </p>
+     <h1>
+      RouteRunner Bus Booking
+     </h1>
+     <p>
+      Compare routes, choose a seat and create a sample ticket.
+     </p>
+     <div class="travel-stat">
+      <span>
+       ✦ Easy planning
+      </span>
+      <span>
+       ◉ Clear details
+      </span>
+      <span>
+       &nearrow; Demo booking
+      </span>
+     </div>
+    </div>
+    <div class="route-visual">
+     <div class="route-line">
+     </div>
+     <span class="station station-a">
+      A
+     </span>
+     <span class="station station-b">
+      B
+     </span>
+     <div class="route-chip">
+      YOUR NEXT JOURNEY
+     </div>
+     <div class="route-emoji">
+      🚌
+     </div>
+    </div>
+   </section>
+   <div class="quick-strip">
+    <div class="quick-item">
+     <span class="quick-icon">
+      ✦
+     </span>
+     <span>
+      <strong>
+       Live route board
+      </strong>
+      <small>
+       Compare available departures.
+      </small>
+     </span>
+    </div>
+    <div class="quick-item">
+     <span class="quick-icon">
+      ◉
+     </span>
+     <span>
+      <strong>
+       Seat selection
+      </strong>
+      <small>
+       Choose a seat and passenger details.
+      </small>
+     </span>
+    </div>
+    <div class="quick-item">
+     <span class="quick-icon">
+      &nearrow;
+     </span>
+     <span>
+      <strong>
+       My bookings
+      </strong>
+      <small>
+       Review sample booking history.
+      </small>
+     </span>
+    </div>
+   </div>
+   <section class="section-block" id="catalog">
+    <div class="section-heading">
+     <div>
+      <p class="eyebrow">
+       DISCOVER
+      </p>
+      <h2>
+       Route options
+      </h2>
+     </div>
+     <span class="section-count">
+      03 AREAS
+     </span>
+    </div>
+    <div class="feature-grid">
+     <article class="feature-card feature-1">
+      <div class="feature-symbol">
+       ✦
+      </div>
+      <h3>
+       Live route board
+      </h3>
+      <p>
+       Compare available departures.
+      </p>
+      <a href="#workspace">
+       Open module
+       <b>
+        &rarr;
+       </b>
+      </a>
+     </article>
+     <article class="feature-card feature-2">
+      <div class="feature-symbol">
+       ◈
+      </div>
+      <h3>
+       Seat selection
+      </h3>
+      <p>
+       Choose a seat and passenger details.
+      </p>
+      <a href="#workspace">
+       Open module
+       <b>
+        &rarr;
+       </b>
+      </a>
+     </article>
+     <article class="feature-card feature-3">
+      <div class="feature-symbol">
+       &nearrow;
+      </div>
+      <h3>
+       My bookings
+      </h3>
+      <p>
+       Review sample booking history.
+      </p>
+      <a href="#workspace">
+       Open module
+       <b>
+        &rarr;
+       </b>
+      </a>
+     </article>
+    </div>
+   </section>
+   <section class="section-block workspace-section booking-workspace" id="workspace">
+    <div class="workspace-heading">
+     <div>
+      <p class="eyebrow">
+       YOUR WORKSPACE
+      </p>
+      <h2>
+       Journey details
+      </h2>
+      <p>
+       Enter your route details to see sample options.
+      </p>
+     </div>
+     <div class="workspace-stamp">
+      <span>
+       03
+      </span>
+      <small>
+       EXPERIMENT
+      </small>
+     </div>
+    </div>
+    <form class="workspace-form field-grid" id="mainForm">
+     <label class="field">
+      <span>
+       From city
+      </span>
+      <input id="field0" name="field0" placeholder="Enter from city" required="" type="text"/>
+     </label>
+     <label class="field">
+      <span>
+       To city
+      </span>
+      <input id="field1" name="field1" placeholder="Enter to city" required="" type="text"/>
+     </label>
+     <label class="field">
+      <span>
+       Journey date
+      </span>
+      <input id="field2" name="field2" placeholder="Enter journey date" type="date"/>
+     </label>
+     <label class="field">
+      <span>
+       Bus type
+      </span>
+      <select id="field3" name="field3">
+       <option value="">
+        Choose bus type
+       </option>
+       <option>
+        AC sleeper
+       </option>
+       <option>
+        Non-AC sleeper
+       </option>
+       <option>
+        Volvo seater
+       </option>
+       <option>
+        Ordinary
+       </option>
+      </select>
+     </label>
+     <label class="field">
+      <span>
+       Passenger name
+      </span>
+      <input id="field4" name="field4" placeholder="Enter passenger name" type="text"/>
+     </label>
+     <label class="field">
+      <span>
+       Seat number
+      </span>
+      <input id="field5" name="field5" placeholder="Enter seat number" type="text"/>
+     </label>
+     <label class="field">
+      <span>
+       Payment mode
+      </span>
+      <select id="field6" name="field6">
+       <option value="">
+        Choose payment mode
+       </option>
+       <option>
+        UPI
+       </option>
+       <option>
+        Card
+       </option>
+       <option>
+        Net banking
+       </option>
+       <option>
+        Pay at counter
+       </option>
+      </select>
+     </label>
+     <div class="form-actions">
+      <button class="submit-btn" type="submit">
+       Search buses
+       <span>
+        &rarr;
+       </span>
+      </button>
+      <button class="reset-btn" type="reset">
+       Clear form
+      </button>
+     </div>
+    </form>
+    <div aria-live="polite" class="result-panel" hidden="" id="result">
+    </div>
+   </section>
+   <section class="note-band">
+    <div class="note-icon">
+     ✳
+    </div>
+    <div>
+     <p class="eyebrow">
+      GOOD TO KNOW
+     </p>
+     <h2>
+      Built around the task
+     </h2>
+     <p>
+      This page uses controls and a result format tailored to this experiment.
+     </p>
+    </div>
+    <a href="#workspace">
+     Continue to workspace &nearrow;
+    </a>
+   </section>
+   <section class="about-demo" id="about">
+    <div>
+     <p class="eyebrow">
+      ABOUT THIS EXPERIMENT
+     </p>
+     <h2>
+      A task-focused interface, built for the lab.
+     </h2>
+    </div>
+    <p>
+     This website demonstrates the fields, workflow and result associated with
+     <strong>
+      Experiment 3: RouteRunner Bus Booking
+     </strong>
+     . Generated records are stored only in this page session and are not sent to a server.
+    </p>
+   </section>
+  </main>
+  <footer class="site-footer">
+   <span>
+    &copy; 2026 RouteRunner Bus Booking &mdash; Lab demonstration
+   </span>
+   <span>
+    HTML &middot; CSS &middot; JavaScript
+    <b>
+     ●
+    </b>
+    Responsive UI
+   </span>
+  </footer>
+ </body>
+</html>
+
